@@ -5,9 +5,27 @@
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <meta
+      name="description"
+      content="an a.i tool to stop you touching your face and spreading the coronavirus/cov19"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DTYF</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-159987383-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-159987383-1");
+    </script>
     <style>
       body {
         font-family: "Montserrat", sans-serif;
@@ -18,15 +36,23 @@
         /* background-image: linear-gradient(41deg, #bc24ff 0%, #6f9ef8 56%); */
       }
       h1 {
+        margin: 0 auto;
         font-size: 3em;
         font-weight: bold;
       }
       #warningText {
         color: red;
+        margin: 0 auto;
+        font-size: 1.5em;
         text-transform: uppercase;
         visibility: hidden;
       }
+      h4 {
+        margin: 0 auto;
+      }
       #video {
+        margin: 0 auto;
+        max-width: 90vw;
       }
       #canvas {
         height: 1vh;
@@ -38,7 +64,7 @@
   <body>
     <h1>DON'T TOUCH YOUR FACE</h1>
     <h2>Avoid COV19</h2>
-    <h2 id="warningText">Warning</h2>
+    <h2 id="warningText">Warning: Don't touch tour face.</h2>
     <audio src="Pile of Poo.ogg" id="audio"></audio>
     <video id="video"></video>
     <canvas id="canvas"></canvas>
@@ -46,7 +72,7 @@
     <script src="./app.js"></script>
     <h4>
       Made by Matthew Gordon <a href="./about.html">About/credits</a>
-      <a href="matt@easytreesy.co">Contact </a>
+      <a href="mailto:matt@easytreesy.co">Contact </a>
       <a
         href="https://www.nhs.uk/conditions/coronavirus-covid-19/common-questions/"
         >Why?</a
