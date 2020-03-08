@@ -1,9 +1,9 @@
 const modelParams = {
   flipHorizontal: true, // flip e.g for video
   imageScaleFactor: 0.5, // reduce input image size for gains in speed.
-  maxNumBoxes: 20, // maximum number of boxes to detect
+  maxNumBoxes: 3, // maximum number of boxes to detect
   iouThreshold: 0.5, // ioU threshold for non-max suppression
-  scoreThreshold: 0.7 // confidence threshold for predictions.
+  scoreThreshold: 0.8 // confidence threshold for predictions.
 };
 
 navigator.getUserMedia =
