@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Nosifer&display=swap"
       rel="stylesheet"
     />
     <meta
@@ -31,21 +31,25 @@
         font-family: "Montserrat", sans-serif;
         text-align: center;
         /* Rectangle: */
-        color: #ab528c;
+        /* color: #ab528c;
+        color: #6280c0; */
+        color: #1f2227;
         background-color: #f8f6e7;
         /* background-image: linear-gradient(41deg, #bc24ff 0%, #6f9ef8 56%); */
       }
       h1 {
         margin: 0 auto;
         font-size: 3em;
-        font-weight: bold;
+        font-weight: 800;
+        font-family: "Nosifer", cursive;
       }
       #warningText {
-        color: red;
+        color: #d0011b;
         margin: 0 auto;
         font-size: 1.5em;
         text-transform: uppercase;
         visibility: hidden;
+        font-family: "Nosifer", cursive;
       }
       h4 {
         margin: 0 auto;
@@ -59,25 +63,46 @@
         width: 1vw;
         visibility: hidden;
       }
+      a:link {
+        text-decoration: none;
+      }
+      a:hover {
+        color: orange;
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
-    <h1>DON'T TOUCH YOUR FACE</h1>
-    <h2>Avoid COV19</h2>
+    <h1>HANDSOFF</h1>
+    <h2>
+      Keep those hands away from your face,<br />
+      Don't become a Corona case
+    </h2>
+    <p>
+      Aim the camera at your face -you'll get a warning when you are touching
+      it.<br />
+    </p>
     <h2 id="warningText">Warning: Don't touch tour face.</h2>
     <audio src="Pile of Poo.ogg" id="audio"></audio>
     <video id="video"></video>
     <canvas id="canvas"></canvas>
     <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"></script>
     <script src="./app.js"></script>
-    <h4>
-      Made by Matthew Gordon <a href="./about.html">About/credits</a>
-      <a href="mailto:matt@easytreesy.co">Contact </a>
-      <a
-        href="https://www.nhs.uk/conditions/coronavirus-covid-19/common-questions/"
-        >Why?</a
-      >
-      Don't forget to wash your hands
-    </h4>
+
+    <footer>
+      <div class="links">
+        <a href="./about.html">About/credits</a>
+        <a href="mailto:matt@easytreesy.co">Contact </a>
+        <a
+          href="https://www.nhs.uk/conditions/coronavirus-covid-19/common-questions/"
+          >Why?</a
+        >
+      </div>
+
+      <h4>
+        Made by Matthew Gordon
+      </h4>
+      <h4>Don't forget to wash your hands</h4>
+    </footer>
   </body>
 </html>

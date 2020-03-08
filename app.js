@@ -17,6 +17,7 @@ const audio = document.querySelector("#audio");
 const canvas = document.querySelector("#canvas");
 const context = canvas.getContext("2d");
 const warningText = document.getElementById("warningText");
+const bodyBg = document.getElementsByTagName("body");
 let model;
 
 handTrack.startVideo(video).then(status => {
@@ -40,8 +41,12 @@ function runDetection() {
     if (predictions.length > 0) {
       audio.play();
       document.title = "🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️";
+      document.body.style.backgroundColor = "black";
+      document.body.style.color = "red";
       warningText.style.visibility = "visible";
       setInterval(() => {
+        document.body.style.backgroundColor = "#f8f6e7";
+        document.body.style.color = "#1f2227";
         document.title = "no touching";
         warningText.style.visibility = "hidden";
       }, 1500);
