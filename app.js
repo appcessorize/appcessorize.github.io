@@ -5,6 +5,18 @@ const modelParams = {
   iouThreshold: 0.5, // ioU threshold for non-max suppression
   scoreThreshold: 0.8 // confidence threshold for predictions.
 };
+var browserModel = "";
+
+var ua = navigator.userAgent.toLowerCase();
+if (ua.indexOf("safari") != -1) {
+  if (ua.indexOf("chrome") > -1) {
+    browserModel = "chromeBrowser";
+    console.log("browser: ", browserModel);
+  } else {
+    browserModel = "safariBrowser";
+    console.log("browser: ", browserModel);
+  }
+}
 
 navigator.getUserMedia =
   navigator.getUserMedia ||
@@ -23,18 +35,32 @@ let model;
 var clicks = 0;
 
 handTrack.startVideo(video).then(status => {
-  if (status) {
-    navigator.getUserMedia(
-      { video: {} },
-      stream => {
-        video.srcObject = stream;
-        console.log("active");
-        setInterval(runDetection, 1000);
-      },
-      err => {
-        console.log(err);
-      }
-    );
+  if (browserModel !== "safariBrowser") {
+    if (status) {
+      navigator.getUserMedia(
+        { video: {} },
+        stream => {
+          video.srcObject = stream;
+          console.log("active");
+          setInterval(runDetection, 1000);
+        },
+        err => {
+          console.log(err);
+        }
+      );
+    }
+  } else if (browserModel === "safariBrowser") {
+    console.log("run this function on safari");
+    warmUp.innerHTML =
+      "we are currently experiencing issues on Safari due to heavy load. Sorry about that";
+    const handleSuccess = stream => {
+      video.srcObject = stream;
+      console.log("active");
+      setInterval(runDetection, 1000);
+    };
+    if (status) {
+      navigator.mediaDevices.getUserMedia({ video: {} }).then(handleSuccess);
+    }
   }
 });
 
