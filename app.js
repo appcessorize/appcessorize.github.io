@@ -18,7 +18,9 @@ const canvas = document.querySelector("#canvas");
 const context = canvas.getContext("2d");
 const warningText = document.getElementById("warningText");
 const bodyBg = document.getElementsByTagName("body");
+const warmUp = document.getElementById("warmUp");
 let model;
+var clicks = 0;
 
 handTrack.startVideo(video).then(status => {
   if (status) {
@@ -43,8 +45,11 @@ function runDetection() {
       document.title = "🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️";
       document.body.style.backgroundColor = "black";
       document.body.style.color = "red";
+      // warmUp.style.visibility = "hidden";
       warningText.style.visibility = "visible";
-      setInterval(() => {
+      clicks += 1;
+      warmUp.innerHTML = clicks;
+      setTimeout(() => {
         document.body.style.backgroundColor = "#f8f6e7";
         document.body.style.color = "#1f2227";
         document.title = "no touching";

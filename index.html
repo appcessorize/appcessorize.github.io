@@ -67,6 +67,7 @@
       }
       a:link {
         text-decoration: none;
+        margin: 10px;
       }
       a:hover {
         color: orange;
@@ -74,6 +75,10 @@
       }
       .explanation-text {
         color: #6a687a;
+      }
+      #warmUp {
+        margin: 0;
+        color: orange;
       }
     </style>
   </head>
@@ -89,8 +94,8 @@
       <br />
       Aim the camera at your face<br />
       You'll get a warning when you are touching it.<br /><br />
-      Takes a minute to warm up - please be patient
     </p>
+    <p id="warmUp">Takes a minute to warm up - please be patient</p>
 
     <h2 id="warningText">Warning: Don't touch tour face.</h2>
     <audio src="Pile of Poo.ogg" id="audio"></audio>
@@ -98,13 +103,10 @@
     <canvas id="canvas"></canvas>
     <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"></script>
     <script src="./app.js"></script>
-    <p>
-      Keep those hands away from your face,<br />
-      Don't become a Corona case<br />
-    </p>
+
     <footer>
       <div class="links">
-        <a href="./about.html">About/credits</a>
+        <a href="./about.html">About/Credits</a>
         <a href="mailto:matt@easytreesy.co">Contact </a>
         <a
           href="https://www.nhs.uk/conditions/coronavirus-covid-19/common-questions/"
