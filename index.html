@@ -5,6 +5,7 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:400,800|Nosifer&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="styles.min.css" />
     <meta
       name="description"
       content="an a.i tool to stop you touching your face and spreading the coronavirus/cov19"
@@ -26,68 +27,12 @@
 
       gtag("config", "UA-159987383-1");
     </script>
-    <style>
-      body {
-        font-family: "Montserrat", sans-serif;
-        text-align: center;
-        /* Rectangle: */
-        /* color: #ab528c;
-        color: #6280c0; */
-        color: #1f2227;
-        background-color: #f8f6e7;
-        /* background-image: linear-gradient(41deg, #bc24ff 0%, #6f9ef8 56%); */
-      }
-      h1 {
-        text-align: center;
-        margin: 0 auto;
-        font-size: 6vw;
-        font-weight: 800;
-        font-family: "Nosifer", cursive;
-        max-width: 70%;
-      }
-      #warningText {
-        color: #d0011b;
-        margin: 0 auto;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        visibility: hidden;
-        font-family: "Nosifer", cursive;
-      }
-      h4 {
-        margin: 0 auto;
-      }
-      #video {
-        margin: 0 auto;
-        max-width: 90vw;
-      }
-      #canvas {
-        height: 1vh;
-        width: 1vw;
-        visibility: hidden;
-      }
-      a:link {
-        text-decoration: none;
-        margin: 10px;
-      }
-      a:hover {
-        color: orange;
-        text-decoration: underline;
-      }
-      .explanation-text {
-        color: #6a687a;
-      }
-      #warmUp {
-        margin: 0;
-        color: orange;
-      }
-    </style>
   </head>
   <body>
     <h1>HANDSOFF</h1>
     <h2>
       Antivirus for your Face
     </h2>
-
     <p class="explanation-text">
       Touching your face spreads viruses<br />
       Not touching your face is hard...<br />
@@ -107,7 +52,7 @@
     <footer>
       <div class="links">
         <a href="./about.html">About/Credits</a>
-        <a href="mailto:matt@easytreesy.co">Contact </a>
+
         <a
           href="https://www.nhs.uk/conditions/coronavirus-covid-19/common-questions/"
           >Why?</a
@@ -129,6 +74,41 @@
           "8b9635557d843c9ec6d808a39e7d095cd5564e0e7f54f99c56955eb276a75743";
         v.parentNode.insertBefore(j, v);
       })(window, document, "script", "//load.sumo.com/");
+    </script>
+
+    <script type="text/javascript" data-cfasync="false">
+      window.purechatApi = {
+        l: [],
+        t: [],
+        on: function() {
+          this.l.push(arguments);
+        }
+      };
+      (function() {
+        var done = false;
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        script.src = "https://app.purechat.com/VisitorWidget/WidgetScript";
+        document
+          .getElementsByTagName("HEAD")
+          .item(0)
+          .appendChild(script);
+        script.onreadystatechange = script.onload = function(e) {
+          if (
+            !done &&
+            (!this.readyState ||
+              this.readyState == "loaded" ||
+              this.readyState == "complete")
+          ) {
+            var w = new PCWidget({
+              c: "83cf94df-8e4a-4fc5-81b4-144c05852689",
+              f: true
+            });
+            done = true;
+          }
+        };
+      })();
     </script>
   </body>
 </html>

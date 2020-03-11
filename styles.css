@@ -1,0 +1,50 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+
+  color: #1f2227;
+  background-color: #f8f6e7;
+}
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 6vw;
+  font-weight: 800;
+  font-family: "Nosifer", cursive;
+  max-width: 70%;
+}
+#warningText {
+  color: #d0011b;
+  margin: 0 auto;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  visibility: hidden;
+  font-family: "Nosifer", cursive;
+}
+h4 {
+  margin: 0 auto;
+}
+#video {
+  margin: 0 auto;
+  max-width: 90vw;
+}
+#canvas {
+  height: 1vh;
+  width: 1vw;
+  visibility: hidden;
+}
+a:link {
+  text-decoration: none;
+  margin: 10px;
+}
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+.explanation-text {
+  color: #6a687a;
+}
+#warmUp {
+  margin: 0;
+  color: orange;
+}

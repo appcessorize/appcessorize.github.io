@@ -31,6 +31,7 @@ const context = canvas.getContext("2d");
 const warningText = document.getElementById("warningText");
 const bodyBg = document.getElementsByTagName("body");
 const warmUp = document.getElementById("warmUp");
+
 let model;
 var clicks = 0;
 
@@ -52,7 +53,7 @@ handTrack.startVideo(video).then(status => {
   } else if (browserModel === "safariBrowser") {
     console.log("run this function on safari");
     warmUp.innerHTML =
-      "we are currently experiencing issues on Safari due to heavy load. Sorry about that";
+      "We are currently experiencing issues on Safari due to heavy load. Sorry about that";
     const handleSuccess = stream => {
       video.srcObject = stream;
       console.log("active");
@@ -71,8 +72,9 @@ function runDetection() {
       document.title = "🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️🙅🏻‍♂️";
       document.body.style.backgroundColor = "black";
       document.body.style.color = "red";
-      // warmUp.style.visibility = "hidden";
+
       warningText.style.visibility = "visible";
+
       clicks += 1;
       warmUp.innerHTML = clicks;
       setTimeout(() => {
